@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 import { Entry } from "../shared/entry.model";
 import { EntryService } from '../shared/entry.service';
 
@@ -14,6 +13,6 @@ export class EntryListComponent extends BaserResourceListComponent<Entry> {
 
   constructor(private entryService: EntryService) {
     super(entryService)
-  }
+   }
 
 }
