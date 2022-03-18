@@ -5,6 +5,7 @@ import { BreadCrumbComponent } from './components/bread-crumb/bread-crumb.compon
 
 import { RouterModule } from '@angular/router';
 import { PageHeaderComponent } from './components/page-header/page-header.component';
+import { FormFieldErrorComponent } from './components/form-field-error/form-field-error.component';
 
 @NgModule({
   imports: [
@@ -14,13 +15,15 @@ import { PageHeaderComponent } from './components/page-header/page-header.compon
   ],
   declarations: [
     BreadCrumbComponent,
-    PageHeaderComponent
+    PageHeaderComponent,
+    FormFieldErrorComponent
   ],
   exports:[
     CommonModule,
     ReactiveFormsModule,
     BreadCrumbComponent,
-    PageHeaderComponent
+    PageHeaderComponent,
+    FormFieldErrorComponent
   ]
 })
 export class SharedModule { }
