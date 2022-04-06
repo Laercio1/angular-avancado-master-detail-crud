@@ -1,0 +1,133 @@
+<div class="header bg-gradient-nts pb-8 pt-5 pt-md-8 mb-3">
+</div>
+<div class="container-fluid mt--7">
+<div class="card card-raised">
+  <div class="card-header bg-dark text-white px-4">
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="me-4">
+        <h2 class="card-title text-white mb-2" style="font-size: 40px;"><i class="fa-solid fa-cart-plus mr-2"></i>Compras</h2>
+        <div class="card-subtitle" style="font-size: 16px;">Detalhes da compra</div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body p-4">
+    <!-- Simple DataTables example-->
+    <div class="dataTable-wrapper dataTable-loading no-footer sortable searchable fixed-columns">
+      <div class="dataTable-top">
+        <div class="dataTable-dropdown">
+          <label>
+            <select class="dataTable-selector">
+              <option value="5">5</option>
+              <option value="10" selected="">10</option>
+              <option value="15">15</option>
+              <option value="20">20</option>
+              <option value="25">25</option>
+            </select>
+            Compras por página
+          </label>
+        </div>
+        <div class="dataTable-search">
+          <input class="dataTable-input" placeholder="Pesquisa..." type="text">
+        </div>
+      </div>
+      <div class="dataTable-container">
+        <table id="datatablesSimple" class="dataTable-table">
+          <thead>
+            <tr>
+              <th data-sortable="" style="width: 8.5000%;">
+                <a href="#" class="dataTable-sorter">Código</a>
+              </th>
+              <th data-sortable="" style="width: 11.5000%;">
+                <a href="#" class="dataTable-sorter text-center">Produto</a>
+              </th>
+              <th data-sortable="" style="width: 11.2784%;">
+                <a href="#" class="dataTable-sorter text-center">Quantidade</a>
+              </th>
+              <th data-type="date" data-format="YYYY/MM/DD" data-sortable="" style="width: 15.5972%;">
+                <a href="#" class="dataTable-sorter text-center">Comprador</a>
+              </th>
+              <th data-sortable="" style="width: 9.0521%;">
+                <a href="#" class="dataTable-sorter text-center">Fornecedor</a>
+              </th>
+              <th data-sortable="" style="width: 9.2784%;">
+                <a href="#" class="dataTable-sorter text-center">Data</a>
+              </th>
+              <th data-sortable="" style="width: 11.2784%;">
+                <a href="#" class="dataTable-sorter text-center">Pagamento</a>
+              </th>
+              <th data-sortable="" style="width: 16.2784%;">
+                <a href="#" class="dataTable-sorter text-center">Total</a>
+              </th>
+              <th data-sortable="" style="width: 30.5048%;">
+                <a href="#" class="dataTable-sorter text-center">Ações</a>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let purchase of resources">
+              <td>{{purchase.id}}</td>
+              <td class="text-center">{{purchase.product.name}}</td>
+              <td class="text-center">{{purchase.quatity}}</td>
+              <td class="text-center">{{purchase.buyer}}</td>
+              <td class="text-center">{{purchase.categoryId}}</td>
+              <td class="text-center">{{purchase.date}}</td>
+              <td class="cell text-center"><span class="badge" [class.bg-success]="purchase.paid == true" [class.bg-yellow]="purchase.paid == false">
+                {{purchase.paidText}}
+              </span>
+            </td>
+            <td class="cell text-center">R$ {{purchase.amount}}</td>
+              <td class="text-center">
+                <button [routerLink]="[purchase.id,'edit']" class="btn btn-info btn-sm text-white mr-2">
+                  <i class="fa fa-edit"></i>
+                </button>
+                <button (click)="deleteResource(purchase)" class="btn btn-danger btn-sm">
+                  <i class="fa fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="dataTable-bottom">
+        <div class="dataTable-info">Mostrando 1 a 10 de 100 compras</div>
+      <nav class="dataTable-pagination">
+        <ul class="dataTable-pagination-list">
+          <li class="active">
+            <a href="#" data-page="1">1</a>
+          </li><li class="">
+            <a href="#" data-page="2">2</a>
+          </li>
+          <li class="">
+            <a href="#" data-page="3">3</a>
+          </li>
+          <li class="">
+            <a href="#" data-page="4">4</a>
+          </li>
+          <li class="">
+            <a href="#" data-page="5">5</a>
+          </li>
+          <li class="">
+            <a href="#" data-page="6">6</a>
+          </li>
+          <li class="">
+            <a href="#" data-page="7">7</a>
+          </li>
+          <li class="ellipsis">
+            <a href="#">…</a>
+          </li><li class="">
+            <a href="#" data-page="10">10</a>
+          </li>
+          <li class="pager">
+            <a href="#" data-page="2">›</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+

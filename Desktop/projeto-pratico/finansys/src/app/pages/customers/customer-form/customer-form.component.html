@@ -1,0 +1,194 @@
+<div class="header bg-gradient-nts pb-8 pt-5 pt-md-8 mb-3">
+  <div class="container-fluid">
+
+  </div>
+</div>
+<div class="container-fluid mt--7">
+<div class="col-12">
+  <div class="card" style="background-color: rgb(233, 229, 216);">
+    <div class="card-body">
+      <h4 class="card-title" style="font-size: 30px;" class="mb-5">Clientes</h4>
+
+      <app-page-header
+      button-text="<< Voltar"
+      button-link="/customers"
+      button-class="btn btn-nts float-right mt-3"
+      [page-title]="pageTitle"
+      ></app-page-header>
+
+      <form [formGroup]="resourceForm" (submit)="submitForm()">
+        <p class="card-description mb-4"><strong>Informações sobre o cliente:</strong></p>
+
+        <div class="row">
+
+          <div class="col-md-6">
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Nome Completo</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" id="name" formControlName="name">
+
+                <app-form-field-error [form-control]="resourceForm.get('name')"></app-form-field-error>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">CPF/CNPJ</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" id="CNPJ_CPF" formControlName="CNPJ_CPF">
+
+                <app-form-field-error [form-control]="resourceForm.get('CNPJ_CPF')"></app-form-field-error>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <div class="col-md-6">
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Data de Nascimento</label>
+              <div class="col-sm-9">
+                <p-calendar
+                id="birth_date"
+                formControlName="birth_date"
+                inputStyleClass="form-control"
+                dataType="string"
+                dateFormat="dd/mm/yy"
+                [locale]="ptBR"
+                [showButtonBar]="true"
+                >
+              </p-calendar>
+
+              <app-form-field-error [form-control]="resourceForm.get('birth_date')"></app-form-field-error>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Endereço</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="address" formControlName="address">
+
+              <app-form-field-error [form-control]="resourceForm.get('address')"></app-form-field-error>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="col-md-6">
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Bairro</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="district" formControlName="district">
+
+              <app-form-field-error [form-control]="resourceForm.get('district')"></app-form-field-error>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Cidade</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="city" formControlName="city">
+
+              <app-form-field-error [form-control]="resourceForm.get('city')"></app-form-field-error>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="col-md-6">
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Estado</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="state" formControlName="state">
+
+              <app-form-field-error [form-control]="resourceForm.get('state')"></app-form-field-error>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label">País</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="country" formControlName="country">
+
+              <app-form-field-error [form-control]="resourceForm.get('country')"></app-form-field-error>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Telefone</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="telephone" formControlName="telephone">
+
+              <app-form-field-error [form-control]="resourceForm.get('telephone')"></app-form-field-error>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label">E-mail</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="email" formControlName="email">
+
+              <app-form-field-error [form-control]="resourceForm.get('email')"></app-form-field-error>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Descrição</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="description" formControlName="description">
+
+              <app-form-field-error [form-control]="resourceForm.get('description')"></app-form-field-error>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Nota Fiscal</label>
+            <div class="col-sm-9">
+              <select class="form-control">
+                <option>America</option>
+                <option>Italy</option>
+                <option>Russia</option>
+                <option>Britain</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <app-server-error-messages [server-error-messages]="serverErrorMessages"></app-server-error-messages>
+
+      <button [disabled]="submittingForm || resourceForm.invalid" type="submit" class="btn btn-nts float-right mt-3">
+        Salvar
+      </button>
+    </form>
+  </div>
+</div>
+</div>
+</div>
+
+

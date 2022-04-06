@@ -1,31 +1,118 @@
-<app-bread-crumb
-[items]="[{text: 'Categorias'}]"
-></app-bread-crumb>
+<div class="header bg-gradient-nts pb-8 pt-5 pt-md-8 mb-3">
+  <div class="container-fluid">
 
-<app-page-header
-page-title="Categorias"
-button-text="+ Nova Categoria"
-button-link="new"
-button-class="btn-success"
-></app-page-header>
+  </div>
+</div>
+<div class="container-fluid mt--7">
+<div class="card card-raised">
+  <div class="card-header bg-dark text-white px-4">
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="me-4">
+        <h2 class="card-title text-white mb-2" style="font-size: 40px;"><i class="fa fa-user mr-2"> </i>Fornecedores</h2>
+        <div class="card-subtitle" style="font-size: 16px;">Detalhes do fornecedor</div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body p-4">
+    <!-- Simple DataTables example-->
+    <div class="dataTable-wrapper dataTable-loading no-footer sortable searchable fixed-columns">
+      <div class="dataTable-top">
+        <div class="dataTable-dropdown">
+          <label>
+            <select class="dataTable-selector">
+              <option value="5">5</option>
+              <option value="10" selected="">10</option>
+              <option value="15">15</option>
+              <option value="20">20</option>
+              <option value="25">25</option>
+            </select>
+            Fornecedores por página
+          </label>
+        </div>
+        <div class="dataTable-search">
+          <input class="dataTable-input" placeholder="Pesquisa..." type="text">
+        </div>
+      </div>
+      <div class="dataTable-container">
+        <table id="datatablesSimple" class="dataTable-table">
+          <thead>
+            <tr>
+              <th data-sortable="" style="width: 25.5000%;">
+                <a href="#" class="dataTable-sorter">Nome Fantasia</a>
+              </th>
+              <th data-sortable="" style="width: 17.2784%;">
+                <a href="#" class="dataTable-sorter text-center">CNPJ</a>
+              </th>
+              <th data-type="date" data-format="YYYY/MM/DD" data-sortable="" style="width: 15.5972%;">
+                <a href="#" class="dataTable-sorter text-center">Telefone</a>
+              </th>
+              <th data-sortable="" style="width: 15.0521%;">
+                <a href="#" class="dataTable-sorter text-center">Cidade</a>
+              </th>
+              <th data-sortable="" style="width: 15.2784%;">
+                <a href="#" class="dataTable-sorter text-center">Estado</a>
+              </th>
+              <th data-sortable="" style="width: 24.5048%;">
+                <a href="#" class="dataTable-sorter text-center">Ações</a>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let category of resources">
+              <td>{{category.namefancy}}</td>
+              <td class="text-center">{{category.CNPJ}}</td>
+              <td class="text-center">{{category.telephone}}</td>
+              <td class="text-center">{{category.city}}</td>
+              <td class="text-center">{{category.state}}</td>
+              <td class="text-center">
+                <button [routerLink]="[category.id,'edit']" class="btn btn-info btn-sm text-white mr-2">
+                  <i class="fa fa-edit"></i>
+                </button>
+                <button (click)="deleteResource(category)" class="btn btn-danger btn-sm">
+                  <i class="fa fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="dataTable-bottom">
+        <div class="dataTable-info">Mostrando 1 a 10 de 100 clientes</div>
+      <nav class="dataTable-pagination">
+        <ul class="dataTable-pagination-list">
+          <li class="active">
+            <a href="#" data-page="1">1</a>
+          </li><li class="">
+            <a href="#" data-page="2">2</a>
+          </li>
+          <li class="">
+            <a href="#" data-page="3">3</a>
+          </li>
+          <li class="">
+            <a href="#" data-page="4">4</a>
+          </li>
+          <li class="">
+            <a href="#" data-page="5">5</a>
+          </li>
+          <li class="">
+            <a href="#" data-page="6">6</a>
+          </li>
+          <li class="">
+            <a href="#" data-page="7">7</a>
+          </li>
+          <li class="ellipsis">
+            <a href="#">…</a>
+          </li><li class="">
+            <a href="#" data-page="10">10</a>
+          </li>
+          <li class="pager">
+            <a href="#" data-page="2">›</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    </div>
+  </div>
+</div>
+</div>
 
-<table class="table table-hover">
-  <thead>
-    <tr class="bg-primary text-light">
-      <th>Categorias</th>
-      <th>Ações</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let category of resources">
-      <td>
-        <strong>{{category.name}}</strong><br>
-        <small>{{category.description}}</small>
-      </td>
-      <td>
-        <a [routerLink]="[category.id,'edit']" class="btn btn-outline-info btn-sm mr-2">Editar</a>
-        <button (click)="deleteResource(category)" class="btn btn-outline-danger btn-sm">Excluir</button>
-      </td>
-    </tr>
-  </tbody>
-</table>

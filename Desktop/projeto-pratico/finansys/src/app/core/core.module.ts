@@ -8,6 +8,7 @@ import { InMemoryDatabase } from '../in-memory-database';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 
+
 @NgModule({
   imports: [
     CommonModule,
@@ -15,7 +16,8 @@ import { RouterModule } from '@angular/router';
     BrowserAnimationsModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDatabase),
-    RouterModule
+    RouterModule,
+    
   ],
   declarations: [NavbarComponent],
   exports: [

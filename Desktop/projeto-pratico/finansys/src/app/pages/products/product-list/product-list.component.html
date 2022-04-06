@@ -1,0 +1,119 @@
+<div class="header bg-gradient-nts pb-8 pt-5 pt-md-8 mb-3">
+</div>
+<div class="container-fluid mt--7">
+<div class="card card-raised">
+  <div class="card-header bg-dark text-white px-4">
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="me-4">
+        <h2 class="card-title text-white mb-2" style="font-size: 40px;"><i class="fa-solid fa-computer mr-2"></i>Produtos</h2>
+        <div class="card-subtitle" style="font-size: 16px;">Detalhes do produto</div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body p-4">
+    <!-- Simple DataTables example-->
+    <div class="dataTable-wrapper dataTable-loading no-footer sortable searchable fixed-columns">
+      <div class="dataTable-top">
+        <div class="dataTable-dropdown">
+          <label>
+            <select class="dataTable-selector">
+              <option value="5">5</option>
+              <option value="10" selected="">10</option>
+              <option value="15">15</option>
+              <option value="20">20</option>
+              <option value="25">25</option>
+            </select>
+            Produtos por página
+          </label>
+        </div>
+        <div class="dataTable-search">
+          <input class="dataTable-input" placeholder="Pesquisa..." type="text">
+        </div>
+      </div>
+      <div class="dataTable-container">
+        <table id="datatablesSimple" class="dataTable-table">
+          <thead>
+            <tr>
+              <th data-sortable="" style="width: 11.5000%;">
+                <a href="#" class="dataTable-sorter">Código</a>
+              </th>
+              <th data-sortable="" style="width: 21.5000%;">
+                <a href="#" class="dataTable-sorter text-center">Nome</a>
+              </th>
+              <th data-sortable="" style="width: 11.2784%;">
+                <a href="#" class="dataTable-sorter text-center">Estoque</a>
+              </th>
+              <th data-type="date" data-format="YYYY/MM/DD" data-sortable="" style="width: 15.5972%;">
+                <a href="#" class="dataTable-sorter text-center">Marca</a>
+              </th>
+              <th data-sortable="" style="width: 14.0521%;">
+                <a href="#" class="dataTable-sorter text-center">Categoria</a>
+              </th>
+              <th data-sortable="" style="width: 15.2784%;">
+                <a href="#" class="dataTable-sorter text-center">Valor Unitário</a>
+              </th>
+              <th data-sortable="" style="width: 26.5048%;">
+                <a href="#" class="dataTable-sorter text-center">Ações</a>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let product of resources">
+              <td>{{product.id}}</td>
+              <td class="text-center">{{product.name}}</td>
+              <td class="text-center">{{product.stock}}</td>
+              <td class="text-center">{{product.marca}}</td>
+              <td class="text-center">{{product.category}}</td>
+              <td class="text-center">{{product.amount}}</td>
+              <td class="text-center">
+                <button [routerLink]="[product.id,'edit']" class="btn btn-info btn-sm text-white mr-2">
+                  <i class="fa fa-edit"></i>
+                </button>
+                <button (click)="deleteResource(product)" class="btn btn-danger btn-sm">
+                  <i class="fa fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="dataTable-bottom">
+        <div class="dataTable-info">Mostrando 1 a 10 de 100 produtos</div>
+      <nav class="dataTable-pagination">
+        <ul class="dataTable-pagination-list">
+          <li class="active">
+            <a href="#" data-page="1">1</a>
+          </li><li class="">
+            <a href="#" data-page="2">2</a>
+          </li>
+          <li class="">
+            <a href="#" data-page="3">3</a>
+          </li>
+          <li class="">
+            <a href="#" data-page="4">4</a>
+          </li>
+          <li class="">
+            <a href="#" data-page="5">5</a>
+          </li>
+          <li class="">
+            <a href="#" data-page="6">6</a>
+          </li>
+          <li class="">
+            <a href="#" data-page="7">7</a>
+          </li>
+          <li class="ellipsis">
+            <a href="#">…</a>
+          </li><li class="">
+            <a href="#" data-page="10">10</a>
+          </li>
+          <li class="pager">
+            <a href="#" data-page="2">›</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+

@@ -1,0 +1,202 @@
+<div class="header bg-gradient-nts pb-8 pt-5 pt-md-8 mb-3">
+  <div class="container-fluid">
+
+  </div>
+</div>
+<div class="container-fluid mt--7">
+<div class="col-12">
+  <div class="card" style="background-color: rgb(233, 229, 216);">
+    <div class="card-body">
+      <h4 class="card-title" style="font-size: 30px;" class="mb-5">Vendas</h4>
+
+      <app-page-header
+      button-text="<< Voltar"
+      button-link="/sales"
+      button-class="btn btn-nts float-right mt-3"
+      [page-title]="pageTitle"
+      ></app-page-header>
+
+      <form [formGroup]="resourceForm" (submit)="submitForm()">
+        <p class="card-description mb-4"><strong>Informações sobre a venda:</strong></p>
+
+        <div class="row">
+
+          <div class="col-md-6">
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Produto</label>
+              <div class="col-sm-9">
+                <select name="productId" id="productId" formControlName="productId" class="form-control">
+                  <option *ngFor="let product of products" [value]="product.id">{{product.name}}</option>
+                </select>
+
+                <app-form-field-error [form-control]="resourceForm.get('productId')"></app-form-field-error>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Quantidade</label>
+              <div class="col-sm-9">
+                <input type="number" class="form-control" id="quatity" formControlName="quatity">
+
+                <app-form-field-error [form-control]="resourceForm.get('quatity')"></app-form-field-error>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <div class="col-md-6">
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Valor</label>
+              <div class="col-sm-9">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">R$</div>
+                  </div>
+                  <input [imask]="imaskConfig" type="text" class="form-control text-right" id="amount" formControlName="amount">
+                </div>
+
+                <app-form-field-error [form-control]="resourceForm.get('amount')"></app-form-field-error>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="form-group row">
+              <label class="col-sm-3 col-form-label">Data</label>
+              <div class="col-sm-9">
+                <p-calendar
+                id="date"
+                formControlName="date"
+                inputStyleClass="form-control"
+                dataType="string"
+                dateFormat="dd/mm/yy"
+                [locale]="ptBR"
+                [showButtonBar]="true"
+                >
+              </p-calendar>
+
+              <app-form-field-error [form-control]="resourceForm.get('date')"></app-form-field-error>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="col-md-6">
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Tipo de Pagamento</label>
+            <div class="col-sm-9">
+              <div class="btn-group">
+                <label (click)="resourceForm.get('paid').setValue(true)" [class.active]="resourceForm.get('paid').value == true" class="btn btn-outline-nts">
+                  Dinheiro
+                </label>
+                <label (click)="resourceForm.get('paid').setValue(false)" [class.active]="resourceForm.get('paid').value == false"  class="btn btn-outline-nts">
+                  Cartão
+                </label>
+              </div>
+
+              <app-form-field-error [form-control]="resourceForm.get('paid')"></app-form-field-error>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Vendedor</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="vendor" formControlName="vendor">
+
+              <app-form-field-error [form-control]="resourceForm.get('vendor')"></app-form-field-error>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="col-md-6">
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Cliente</label>
+            <div class="col-sm-9">
+              <select name="customerId" id="customerId" formControlName="customerId" class="form-control">
+                <option *ngFor="let customer of customers" [value]="customer.id">{{customer.name}}</option>
+              </select>
+
+              <app-form-field-error [form-control]="resourceForm.get('customerId')"></app-form-field-error>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Descrição</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="description" formControlName="description">
+
+              <app-form-field-error [form-control]="resourceForm.get('description')"></app-form-field-error>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Desconto</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Garantia</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Entrega</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Nota Fiscal</label>
+            <div class="col-sm-9">
+              <select class="form-control">
+                <option>America</option>
+                <option>Italy</option>
+                <option>Russia</option>
+                <option>Britain</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <app-server-error-messages [server-error-messages]="serverErrorMessages"></app-server-error-messages>
+
+      <button [disabled]="submittingForm || resourceForm.invalid" type="submit" class="btn btn-nts float-right mt-3">
+        Salvar
+      </button>
+    </form>
+  </div>
+</div>
+</div>
+</div>

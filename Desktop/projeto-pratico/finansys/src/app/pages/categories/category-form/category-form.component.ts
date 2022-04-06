@@ -20,18 +20,23 @@ export class CategoryFormComponent extends BaseResourceFormComponent<Category> {
   protected buildResourceForm(){
     this.resourceForm = this.formBuilder.group({
       id: [null],
-      name: [null, [Validators.required, Validators.minLength(2)]],
-      description: [null]
+      namefancy: [null, [Validators.required, Validators.minLength(2)]], //Nome fantasia
+      CNPJ: [null, [Validators.required]],
+      telephone: [null, [Validators.required]],
+      email: [null, [Validators.required, Validators.email]],
+      city: [null, [Validators.required]],
+      state: [null, [Validators.required]],
+      country: [null, [Validators.required]]
     });
   }
 
   protected creationPageTitle(): string {
-      return 'Cadastro de Nova Categoria';
+      return 'Cadastro de Novo Fornecedor';
   }
 
   protected editionPageTitle(): string {
-    const categoryName = this.resource.name || "";
-      return 'Editando Categoria: ' + categoryName
+    const categoryName = this.resource.namefancy || "";
+      return 'Editando Fornecedor: ' + categoryName
   }
 
 }

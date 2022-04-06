@@ -2,8 +2,13 @@ import { BaseResourceModel } from '../../../shared/models/base-resource.model';
 export class Category extends BaseResourceModel {
   constructor(
     public id?: number,
-    public name?: string,
-    public description?: string
+    public namefancy?: string,
+    public CNPJ?: string,
+    public telephone?: string,
+    public email?: string,
+    public city?: string,
+    public state?: string,
+    public country?: string
   ){
     super();
   }
