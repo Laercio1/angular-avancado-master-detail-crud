@@ -1,0 +1,10 @@
+C:\Users\NSYS-CDS-0301\Desktop\Visual Studio\UIPrincipal\Base\bin\Debug\Base.exe.config
+C:\Users\NSYS-CDS-0301\Desktop\Visual Studio\UIPrincipal\Base\bin\Debug\Base.exe
+C:\Users\NSYS-CDS-0301\Desktop\Visual Studio\UIPrincipal\Base\bin\Debug\Base.pdb
+C:\Users\NSYS-CDS-0301\Desktop\Visual Studio\UIPrincipal\Base\obj\Debug\Base.csproj.AssemblyReference.cache
+C:\Users\NSYS-CDS-0301\Desktop\Visual Studio\UIPrincipal\Base\obj\Debug\Base.FormPrincipal.resources
+C:\Users\NSYS-CDS-0301\Desktop\Visual Studio\UIPrincipal\Base\obj\Debug\Base.Properties.Resources.resources
+C:\Users\NSYS-CDS-0301\Desktop\Visual Studio\UIPrincipal\Base\obj\Debug\Base.csproj.GenerateResource.cache
+C:\Users\NSYS-CDS-0301\Desktop\Visual Studio\UIPrincipal\Base\obj\Debug\Base.csproj.CoreCompileInputs.cache
+C:\Users\NSYS-CDS-0301\Desktop\Visual Studio\UIPrincipal\Base\obj\Debug\Base.exe
+C:\Users\NSYS-CDS-0301\Desktop\Visual Studio\UIPrincipal\Base\obj\Debug\Base.pdb
