@@ -1,6 +1,7 @@
 ﻿using BLL;
 using System;
 using System.Data;
+using System.IO;
 using System.Windows.Forms;
 
 namespace UIPrincipal
@@ -58,7 +59,6 @@ namespace UIPrincipal
         {
             if (MessageBox.Show("Deseja realmente excluir este registro?", "Atenção", MessageBoxButtons.YesNo) == DialogResult.No)
                 return;
-
 
             UsuarioBLL usuarioBLL = new UsuarioBLL();
             int id;

@@ -54,28 +54,29 @@ namespace UIPrincipal
             this.buttonSalvarECadastrarNovo = new System.Windows.Forms.Button();
             this.buttonSair = new System.Windows.Forms.Button();
             this.idTextBox = new System.Windows.Forms.TextBox();
+            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nomeUsuarioTextBox = new System.Windows.Forms.TextBox();
             this.senhaTextBox = new System.Windows.Forms.TextBox();
             this.ativoCheckBox = new System.Windows.Forms.CheckBox();
             this.enderecoTextBox = new System.Windows.Forms.TextBox();
             this.telefoneTextBox = new System.Windows.Forms.TextBox();
             this.emailTextBox = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.fotoTextBox = new System.Windows.Forms.PictureBox();
+            this.buttonAddimagem = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cpf_cnpjTextBox = new System.Windows.Forms.TextBox();
+            this.rgTextBox = new System.Windows.Forms.TextBox();
+            this.numeroTextBox = new System.Windows.Forms.TextBox();
+            this.dataNascimentoTextBox = new System.Windows.Forms.TextBox();
+            this.profissaoTextBox = new System.Windows.Forms.TextBox();
+            this.sexoComboBox = new System.Windows.Forms.ComboBox();
+            this.estadoCivilComboBox = new System.Windows.Forms.ComboBox();
+            this.complementoTextBox = new System.Windows.Forms.TextBox();
+            this.bairroTextBox = new System.Windows.Forms.TextBox();
+            this.cepTextBox = new System.Windows.Forms.TextBox();
+            this.ufComboBox = new System.Windows.Forms.ComboBox();
+            this.cidadeComboBox = new System.Windows.Forms.ComboBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             idLabel = new System.Windows.Forms.Label();
             nomeUsuarioLabel = new System.Windows.Forms.Label();
             senhaLabel = new System.Windows.Forms.Label();
@@ -95,8 +96,8 @@ namespace UIPrincipal
             label14 = new System.Windows.Forms.Label();
             label15 = new System.Windows.Forms.Label();
             label16 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoTextBox)).BeginInit();
             this.SuspendLayout();
             // 
             // idLabel
@@ -364,6 +365,7 @@ namespace UIPrincipal
             // 
             // idTextBox
             // 
+            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Id", true));
             this.idTextBox.Enabled = false;
             this.idTextBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.idTextBox.Location = new System.Drawing.Point(204, 73);
@@ -371,8 +373,13 @@ namespace UIPrincipal
             this.idTextBox.Size = new System.Drawing.Size(154, 28);
             this.idTextBox.TabIndex = 9;
             // 
+            // usuarioBindingSource
+            // 
+            this.usuarioBindingSource.DataSource = typeof(Model.Usuario);
+            // 
             // nomeUsuarioTextBox
             // 
+            this.nomeUsuarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "NomeUsuario", true));
             this.nomeUsuarioTextBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nomeUsuarioTextBox.Location = new System.Drawing.Point(364, 73);
             this.nomeUsuarioTextBox.Name = "nomeUsuarioTextBox";
@@ -381,6 +388,7 @@ namespace UIPrincipal
             // 
             // senhaTextBox
             // 
+            this.senhaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Senha", true));
             this.senhaTextBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.senhaTextBox.Location = new System.Drawing.Point(550, 403);
             this.senhaTextBox.Name = "senhaTextBox";
@@ -391,6 +399,7 @@ namespace UIPrincipal
             // ativoCheckBox
             // 
             this.ativoCheckBox.AutoSize = true;
+            this.ativoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.usuarioBindingSource, "Ativo", true));
             this.ativoCheckBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ativoCheckBox.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.ativoCheckBox.Location = new System.Drawing.Point(725, 403);
@@ -402,6 +411,7 @@ namespace UIPrincipal
             // 
             // enderecoTextBox
             // 
+            this.enderecoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Endereco", true));
             this.enderecoTextBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.enderecoTextBox.Location = new System.Drawing.Point(204, 238);
             this.enderecoTextBox.Name = "enderecoTextBox";
@@ -410,6 +420,7 @@ namespace UIPrincipal
             // 
             // telefoneTextBox
             // 
+            this.telefoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Telefone", true));
             this.telefoneTextBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.telefoneTextBox.Location = new System.Drawing.Point(36, 403);
             this.telefoneTextBox.Name = "telefoneTextBox";
@@ -418,29 +429,35 @@ namespace UIPrincipal
             // 
             // emailTextBox
             // 
+            this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Email", true));
             this.emailTextBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailTextBox.Location = new System.Drawing.Point(258, 403);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(286, 28);
             this.emailTextBox.TabIndex = 6;
             // 
-            // pictureBox1
+            // fotoTextBox
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox1.Location = new System.Drawing.Point(36, 49);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(142, 184);
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
+            this.fotoTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.fotoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.fotoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.usuarioBindingSource, "Foto", true));
+            this.fotoTextBox.ImageLocation = "";
+            this.fotoTextBox.Location = new System.Drawing.Point(36, 49);
+            this.fotoTextBox.Name = "fotoTextBox";
+            this.fotoTextBox.Size = new System.Drawing.Size(142, 184);
+            this.fotoTextBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.fotoTextBox.TabIndex = 11;
+            this.fotoTextBox.TabStop = false;
             // 
-            // button1
+            // buttonAddimagem
             // 
-            this.button1.Location = new System.Drawing.Point(36, 239);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 38);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Selecionar Imagem";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonAddimagem.Location = new System.Drawing.Point(36, 239);
+            this.buttonAddimagem.Name = "buttonAddimagem";
+            this.buttonAddimagem.Size = new System.Drawing.Size(142, 38);
+            this.buttonAddimagem.TabIndex = 12;
+            this.buttonAddimagem.Text = "Selecionar Imagem";
+            this.buttonAddimagem.UseVisualStyleBackColor = true;
+            this.buttonAddimagem.Click += new System.EventHandler(this.buttonAddimagem_Click);
             // 
             // button2
             // 
@@ -451,113 +468,150 @@ namespace UIPrincipal
             this.button2.Text = "Limpar";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // cpf_cnpjTextBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(204, 128);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(154, 28);
-            this.textBox1.TabIndex = 14;
+            this.cpf_cnpjTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "CPF_CNPJ", true));
+            this.cpf_cnpjTextBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpf_cnpjTextBox.Location = new System.Drawing.Point(204, 128);
+            this.cpf_cnpjTextBox.Name = "cpf_cnpjTextBox";
+            this.cpf_cnpjTextBox.Size = new System.Drawing.Size(154, 28);
+            this.cpf_cnpjTextBox.TabIndex = 14;
             // 
-            // textBox2
+            // rgTextBox
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(364, 128);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(193, 28);
-            this.textBox2.TabIndex = 15;
+            this.rgTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "RG", true));
+            this.rgTextBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rgTextBox.Location = new System.Drawing.Point(364, 128);
+            this.rgTextBox.Name = "rgTextBox";
+            this.rgTextBox.Size = new System.Drawing.Size(193, 28);
+            this.rgTextBox.TabIndex = 15;
             // 
-            // textBox3
+            // numeroTextBox
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(563, 238);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(221, 28);
-            this.textBox3.TabIndex = 16;
+            this.numeroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Numero", true));
+            this.numeroTextBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numeroTextBox.Location = new System.Drawing.Point(563, 238);
+            this.numeroTextBox.Name = "numeroTextBox";
+            this.numeroTextBox.Size = new System.Drawing.Size(221, 28);
+            this.numeroTextBox.TabIndex = 16;
             // 
-            // textBox4
+            // dataNascimentoTextBox
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(204, 183);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(154, 28);
-            this.textBox4.TabIndex = 17;
+            this.dataNascimentoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "DataNascimento", true));
+            this.dataNascimentoTextBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataNascimentoTextBox.Location = new System.Drawing.Point(204, 183);
+            this.dataNascimentoTextBox.Name = "dataNascimentoTextBox";
+            this.dataNascimentoTextBox.Size = new System.Drawing.Size(154, 28);
+            this.dataNascimentoTextBox.TabIndex = 17;
             // 
-            // textBox6
+            // profissaoTextBox
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(563, 183);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(221, 28);
-            this.textBox6.TabIndex = 19;
+            this.profissaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Profissao", true));
+            this.profissaoTextBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.profissaoTextBox.Location = new System.Drawing.Point(563, 183);
+            this.profissaoTextBox.Name = "profissaoTextBox";
+            this.profissaoTextBox.Size = new System.Drawing.Size(221, 28);
+            this.profissaoTextBox.TabIndex = 19;
             // 
-            // comboBox1
+            // sexoComboBox
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(364, 182);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(193, 29);
-            this.comboBox1.TabIndex = 25;
+            this.sexoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Sexo", true));
+            this.sexoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.sexoComboBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sexoComboBox.FormattingEnabled = true;
+            this.sexoComboBox.Items.AddRange(new object[] {
+            "Masculino",
+            "Feminino"});
+            this.sexoComboBox.Location = new System.Drawing.Point(364, 182);
+            this.sexoComboBox.Name = "sexoComboBox";
+            this.sexoComboBox.Size = new System.Drawing.Size(193, 29);
+            this.sexoComboBox.TabIndex = 25;
             // 
-            // comboBox2
+            // estadoCivilComboBox
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(563, 128);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(221, 29);
-            this.comboBox2.TabIndex = 26;
+            this.estadoCivilComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "EstadoCivil", true));
+            this.estadoCivilComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.estadoCivilComboBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.estadoCivilComboBox.FormattingEnabled = true;
+            this.estadoCivilComboBox.Items.AddRange(new object[] {
+            "Solteiro",
+            "Casado",
+            "Separado",
+            "Divorciado",
+            "Viúvo"});
+            this.estadoCivilComboBox.Location = new System.Drawing.Point(563, 128);
+            this.estadoCivilComboBox.Name = "estadoCivilComboBox";
+            this.estadoCivilComboBox.Size = new System.Drawing.Size(221, 29);
+            this.estadoCivilComboBox.TabIndex = 26;
             // 
-            // textBox5
+            // complementoTextBox
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(204, 293);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(216, 28);
-            this.textBox5.TabIndex = 29;
+            this.complementoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Complemento", true));
+            this.complementoTextBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.complementoTextBox.Location = new System.Drawing.Point(204, 293);
+            this.complementoTextBox.Name = "complementoTextBox";
+            this.complementoTextBox.Size = new System.Drawing.Size(216, 28);
+            this.complementoTextBox.TabIndex = 29;
             // 
-            // textBox7
+            // bairroTextBox
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(426, 293);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(358, 28);
-            this.textBox7.TabIndex = 31;
+            this.bairroTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Bairro", true));
+            this.bairroTextBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bairroTextBox.Location = new System.Drawing.Point(426, 293);
+            this.bairroTextBox.Name = "bairroTextBox";
+            this.bairroTextBox.Size = new System.Drawing.Size(358, 28);
+            this.bairroTextBox.TabIndex = 31;
             // 
-            // textBox8
+            // cepTextBox
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(36, 348);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(216, 28);
-            this.textBox8.TabIndex = 33;
+            this.cepTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "CEP", true));
+            this.cepTextBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cepTextBox.Location = new System.Drawing.Point(36, 348);
+            this.cepTextBox.Name = "cepTextBox";
+            this.cepTextBox.Size = new System.Drawing.Size(216, 28);
+            this.cepTextBox.TabIndex = 33;
             // 
-            // comboBox3
+            // ufComboBox
             // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(258, 348);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(221, 29);
-            this.comboBox3.TabIndex = 34;
+            this.ufComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "UF", true));
+            this.ufComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ufComboBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ufComboBox.FormattingEnabled = true;
+            this.ufComboBox.Items.AddRange(new object[] {
+            "Tocantins ",
+            "Maranhão",
+            "São Paulo",
+            "Rio de Janeiro",
+            "Pará"});
+            this.ufComboBox.Location = new System.Drawing.Point(258, 348);
+            this.ufComboBox.Name = "ufComboBox";
+            this.ufComboBox.Size = new System.Drawing.Size(221, 29);
+            this.ufComboBox.TabIndex = 34;
             // 
-            // comboBox4
+            // cidadeComboBox
             // 
-            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox4.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(485, 347);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(299, 29);
-            this.comboBox4.TabIndex = 35;
+            this.cidadeComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Cidade", true));
+            this.cidadeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cidadeComboBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cidadeComboBox.FormattingEnabled = true;
+            this.cidadeComboBox.Items.AddRange(new object[] {
+            "Araguaína ",
+            "Palmas",
+            "São Paulo",
+            "Santos ",
+            "Rio de Janeiro",
+            "Cabo Frio",
+            "Belém do Pará",
+            "São Luís"});
+            this.cidadeComboBox.Location = new System.Drawing.Point(485, 347);
+            this.cidadeComboBox.Name = "cidadeComboBox";
+            this.cidadeComboBox.Size = new System.Drawing.Size(299, 29);
+            this.cidadeComboBox.TabIndex = 35;
             // 
-            // usuarioBindingSource
+            // openFileDialog1
             // 
-            this.usuarioBindingSource.DataSource = typeof(Model.Usuario);
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Filter = "JPG(*.jpg)|*.jpg|PNG(*.png)|*.png";
             // 
             // FormCadastroUsuario
             // 
@@ -575,34 +629,34 @@ namespace UIPrincipal
             this.Controls.Add(label15);
             this.Controls.Add(label4);
             this.Controls.Add(label14);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.cidadeComboBox);
+            this.Controls.Add(this.ufComboBox);
+            this.Controls.Add(this.cepTextBox);
             this.Controls.Add(label13);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.bairroTextBox);
             this.Controls.Add(label12);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.complementoTextBox);
             this.Controls.Add(label11);
             this.Controls.Add(label10);
             this.Controls.Add(this.enderecoTextBox);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.estadoCivilComboBox);
+            this.Controls.Add(this.sexoComboBox);
             this.Controls.Add(label9);
             this.Controls.Add(label8);
             this.Controls.Add(label1);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.profissaoTextBox);
             this.Controls.Add(label7);
             this.Controls.Add(label6);
             this.Controls.Add(label5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dataNascimentoTextBox);
+            this.Controls.Add(this.numeroTextBox);
+            this.Controls.Add(this.rgTextBox);
+            this.Controls.Add(this.cpf_cnpjTextBox);
             this.Controls.Add(this.nomeUsuarioTextBox);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonAddimagem);
             this.Controls.Add(this.idTextBox);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.fotoTextBox);
             this.Controls.Add(nomeUsuarioLabel);
             this.Controls.Add(idLabel);
             this.Controls.Add(ativoLabel);
@@ -618,8 +672,8 @@ namespace UIPrincipal
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormCadastroUsuario_KeyDown);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoTextBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -637,22 +691,23 @@ namespace UIPrincipal
         private System.Windows.Forms.TextBox enderecoTextBox;
         private System.Windows.Forms.TextBox telefoneTextBox;
         private System.Windows.Forms.TextBox emailTextBox;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox fotoTextBox;
+        private System.Windows.Forms.Button buttonAddimagem;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.TextBox cpf_cnpjTextBox;
+        private System.Windows.Forms.TextBox rgTextBox;
+        private System.Windows.Forms.TextBox numeroTextBox;
+        private System.Windows.Forms.TextBox dataNascimentoTextBox;
+        private System.Windows.Forms.TextBox profissaoTextBox;
+        private System.Windows.Forms.ComboBox sexoComboBox;
+        private System.Windows.Forms.ComboBox estadoCivilComboBox;
+        private System.Windows.Forms.TextBox complementoTextBox;
+        private System.Windows.Forms.TextBox bairroTextBox;
+        private System.Windows.Forms.TextBox cepTextBox;
+        private System.Windows.Forms.ComboBox ufComboBox;
+        private System.Windows.Forms.ComboBox cidadeComboBox;
         private System.Windows.Forms.BindingSource usuarioBindingSource;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 

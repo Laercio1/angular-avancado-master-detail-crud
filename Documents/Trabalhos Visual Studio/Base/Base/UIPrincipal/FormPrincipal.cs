@@ -9,6 +9,8 @@ namespace UIPrincipal
         public FormPrincipal()
         {
             InitializeComponent();
+            FormLogin formLogin = new FormLogin(this);
+            formLogin.ShowDialog();
             customizeDesing();
         }
         private void customizeDesing()

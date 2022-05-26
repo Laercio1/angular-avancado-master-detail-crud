@@ -38,7 +38,7 @@ namespace UIPrincipal
             this.buttonMenu = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lb_nomeUsuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.panelConteiner = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.menuVertical = new UIPrincipal.GradientPainel();
@@ -170,20 +170,20 @@ namespace UIPrincipal
             this.statusStrip1.AutoSize = false;
             this.statusStrip1.BackColor = System.Drawing.Color.Transparent;
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
+            this.lb_nomeUsuario});
             this.statusStrip1.Location = new System.Drawing.Point(0, 0);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1015, 50);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "Usuário: Teste";
             // 
-            // toolStripStatusLabel1
+            // lb_nomeUsuario
             // 
-            this.toolStripStatusLabel1.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripStatusLabel1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(112, 45);
-            this.toolStripStatusLabel1.Text = "Usuário: Teste";
+            this.lb_nomeUsuario.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_nomeUsuario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lb_nomeUsuario.Name = "lb_nomeUsuario";
+            this.lb_nomeUsuario.Size = new System.Drawing.Size(112, 45);
+            this.lb_nomeUsuario.Text = "Usuário: Teste";
             // 
             // panelConteiner
             // 
@@ -439,7 +439,7 @@ namespace UIPrincipal
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelConteiner;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        public System.Windows.Forms.ToolStripStatusLabel lb_nomeUsuario;
     }
 }

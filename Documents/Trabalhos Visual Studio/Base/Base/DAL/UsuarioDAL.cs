@@ -25,12 +25,89 @@ namespace DAL
                 };
                 cmd.Parameters.Add(pativo);
 
-
                 SqlParameter pnomeUsuario = new SqlParameter("@NomeUsuario", SqlDbType.VarChar)
                 {
                     Value = _usuario.NomeUsuario
                 };
                 cmd.Parameters.Add(pnomeUsuario);
+
+                SqlParameter pcpf_cnpj = new SqlParameter("@CPF_CNPJ", SqlDbType.VarChar)
+                {
+                    Value = _usuario.CPF_CNPJ
+                };
+                cmd.Parameters.Add(pcpf_cnpj);
+
+                SqlParameter prg = new SqlParameter("@RG", SqlDbType.VarChar)
+                {
+                    Value = _usuario.RG
+                };
+                cmd.Parameters.Add(prg);
+
+                SqlParameter pestadoCivil = new SqlParameter("@EstadoCivil", SqlDbType.VarChar)
+                {
+                    Value = _usuario.EstadoCivil
+                };
+                cmd.Parameters.Add(pestadoCivil);
+
+               /* SqlParameter pdataNascimento = new SqlParameter("@DataNascimento", SqlDbType.Date)
+                {
+                    Value = _usuario.DataNascimento
+                };
+                cmd.Parameters.Add(pdataNascimento); */
+
+                SqlParameter psexo = new SqlParameter("@Sexo", SqlDbType.VarChar)
+                {
+                    Value = _usuario.Sexo
+                };
+                cmd.Parameters.Add(psexo);
+
+                SqlParameter pprofissao = new SqlParameter("@Profissao", SqlDbType.VarChar)
+                {
+                    Value = _usuario.Profissao
+                };
+                cmd.Parameters.Add(pprofissao);
+
+                SqlParameter pnumero = new SqlParameter("@Numero", SqlDbType.VarChar)
+                {
+                    Value = _usuario.Numero
+                };
+                cmd.Parameters.Add(pnumero);
+
+                SqlParameter pcomplemento = new SqlParameter("@Complemento", SqlDbType.VarChar)
+                {
+                    Value = _usuario.Complemento
+                };
+                cmd.Parameters.Add(pcomplemento);
+
+                SqlParameter pbairro = new SqlParameter("@Bairro", SqlDbType.VarChar)
+                {
+                    Value = _usuario.Bairro
+                };
+                cmd.Parameters.Add(pbairro);
+
+                SqlParameter pcep = new SqlParameter("@CEP", SqlDbType.VarChar)
+                {
+                    Value = _usuario.CEP
+                };
+                cmd.Parameters.Add(pcep);
+
+                SqlParameter puf = new SqlParameter("@UF", SqlDbType.VarChar)
+                {
+                    Value = _usuario.UF
+                };
+                cmd.Parameters.Add(puf);
+
+                SqlParameter pcidade = new SqlParameter("@Cidade", SqlDbType.VarChar)
+                {
+                    Value = _usuario.Cidade
+                };
+                cmd.Parameters.Add(pcidade);
+
+                SqlParameter pfoto = new SqlParameter("@Foto", SqlDbType.VarChar)
+                {
+                    Value = _usuario.Foto
+                };
+                cmd.Parameters.Add(pfoto);
 
                 SqlParameter pendereco = new SqlParameter("@Endereco", SqlDbType.VarChar)
                 {
@@ -100,6 +177,58 @@ namespace DAL
                 SqlParameter pnomeUsuario = new SqlParameter("@NomeUsuario", SqlDbType.VarChar);
                 pnomeUsuario.Value = _usuario.NomeUsuario;
                 cmd.Parameters.Add(pnomeUsuario);
+
+                SqlParameter pcpf_cnpj = new SqlParameter("@CPF_CNPJ", SqlDbType.VarChar);
+                pcpf_cnpj.Value = _usuario.CPF_CNPJ;
+                cmd.Parameters.Add(pcpf_cnpj);
+
+                SqlParameter prg = new SqlParameter("@RG", SqlDbType.VarChar);
+                prg.Value = _usuario.RG;
+                cmd.Parameters.Add(prg);
+
+                SqlParameter pestadoCivil = new SqlParameter("@EstadoCivil", SqlDbType.VarChar);
+                pestadoCivil.Value = _usuario.EstadoCivil;
+                cmd.Parameters.Add(pestadoCivil);
+
+            /*    SqlParameter pdataNascimento = new SqlParameter("@DataNascimento", SqlDbType.VarChar);
+                pdataNascimento.Value = _usuario.DataNascimento;
+                cmd.Parameters.Add(pdataNascimento); */
+
+                SqlParameter psexo = new SqlParameter("@Sexo", SqlDbType.VarChar);
+                psexo.Value = _usuario.Sexo;
+                cmd.Parameters.Add(psexo);
+
+                SqlParameter pprofissao = new SqlParameter("@Profissao", SqlDbType.VarChar);
+                pprofissao.Value = _usuario.Profissao;
+                cmd.Parameters.Add(pprofissao);
+
+                SqlParameter pnumero = new SqlParameter("@Numero", SqlDbType.VarChar);
+                pnumero.Value = _usuario.Numero;
+                cmd.Parameters.Add(pnumero);
+
+                SqlParameter pcomplemento = new SqlParameter("@Complemento", SqlDbType.VarChar);
+                pcomplemento.Value = _usuario.Complemento;
+                cmd.Parameters.Add(pcomplemento);
+
+                SqlParameter pbairro = new SqlParameter("@Bairro", SqlDbType.VarChar);
+                pbairro.Value = _usuario.Bairro;
+                cmd.Parameters.Add(pbairro);
+
+                SqlParameter pcep = new SqlParameter("@CEP", SqlDbType.VarChar);
+                pcep.Value = _usuario.CEP;
+                cmd.Parameters.Add(pcep);
+
+                SqlParameter puf = new SqlParameter("@UF", SqlDbType.VarChar);
+                puf.Value = _usuario.UF;
+                cmd.Parameters.Add(puf);
+
+                SqlParameter pcidade = new SqlParameter("@Cidade", SqlDbType.VarChar);
+                pcidade.Value = _usuario.Cidade;
+                cmd.Parameters.Add(pcidade);
+
+                SqlParameter pfoto = new SqlParameter("@Foto", SqlDbType.VarChar);
+                pfoto.Value = _usuario.Foto;
+                cmd.Parameters.Add(pfoto);
 
                 SqlParameter pendereco = new SqlParameter("@Endereco", SqlDbType.VarChar);
                 pendereco.Value = _usuario.Endereco;
