@@ -34,33 +34,6 @@ namespace UIPrincipal
             usuarioBindingSource.DataSource = _current;
             inserindoNovo = false;
         }
-
-        private void buttonSair_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void buttonSalvar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (SalvarDados())
-                {
-                    usuarioBindingSource.EndEdit();
-                    if (inserindoNovo)
-                        MessageBox.Show("Cadastro realizado com sucesso!");
-                    else
-                        MessageBox.Show("Cadastro atualizado com sucesso!");
-                    Close();
-                    nomeUsuarioTextBox.Focus();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Ocorreu um erro: " + ex.Message);
-
-            }
-        }
         private bool SalvarDados()
         {
             Usuario usuario = new Usuario();
@@ -172,16 +145,6 @@ namespace UIPrincipal
             }
         }
 
-        private void buttonSalvarECadastrarNovo_Click(object sender, EventArgs e)
-        {
-            usuarioBindingSource.EndEdit();
-            Inserir();
-            MessageBox.Show("Cadastro realizado com sucesso!");
-            usuarioBindingSource.DataSource = typeof(Usuario);
-            usuarioBindingSource.AddNew();
-            nomeUsuarioTextBox.Focus();
-        }
-
         private void buttonAddimagem_Click(object sender, EventArgs e)
         {
             origemCompleto = "";
@@ -207,6 +170,43 @@ namespace UIPrincipal
                 fotoTextBox.ImageLocation = destinoCompleto;
             else
                 MessageBox.Show("Arquivo não copiado");
+        }
+
+        private void buttonSalvar_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                if (SalvarDados())
+                {
+                    usuarioBindingSource.EndEdit();
+                    if (inserindoNovo)
+                        MessageBox.Show("Cadastro realizado com sucesso!");
+                    else
+                        MessageBox.Show("Cadastro atualizado com sucesso!");
+                    Close();
+                    nomeUsuarioTextBox.Focus();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro: " + ex.Message);
+
+            }
+        }
+
+        private void buttonSalvarECadastrarNovo_Click_1(object sender, EventArgs e)
+        {
+            usuarioBindingSource.EndEdit();
+            Inserir();
+            MessageBox.Show("Cadastro realizado com sucesso!");
+            usuarioBindingSource.DataSource = typeof(Usuario);
+            usuarioBindingSource.AddNew();
+            nomeUsuarioTextBox.Focus();
+        }
+
+        private void buttonSair_Click_1(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

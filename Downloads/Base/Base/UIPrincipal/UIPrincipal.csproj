@@ -68,7 +68,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Button.cs" />
+    <Compile Include="ComponentMessageBox\FormMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComponentMessageBox\FormMessageBox.Designer.cs">
+      <DependentUpon>FormMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentMessageBox\RJMessageBox.cs" />
+    <Compile Include="ComponetMenu\MenuColorTable.cs" />
+    <Compile Include="ComponetMenu\MenuDropdown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ComponetMenu\MenuRenderer.cs" />
+    <Compile Include="ComponentButton\RJButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormCadastroLivros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastroLivros.Designer.cs">
+      <DependentUpon>FormCadastroLivros.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCadastroUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +100,12 @@
     </Compile>
     <Compile Include="FormConsultaUsuario.Designer.cs">
       <DependentUpon>FormConsultaUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEmprestimoLivro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEmprestimoLivro.Designer.cs">
+      <DependentUpon>FormEmprestimoLivro.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
@@ -93,16 +119,25 @@
     <Compile Include="FormPrincipal.Designer.cs">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="GradientPainel.cs">
+    <Compile Include="ComponentPanel\GradientPainel.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ComponentMessageBox\FormMessageBox.resx">
+      <DependentUpon>FormMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastroLivros.resx">
+      <DependentUpon>FormCadastroLivros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCadastroUsuario.resx">
       <DependentUpon>FormCadastroUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormConsultaUsuario.resx">
       <DependentUpon>FormConsultaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEmprestimoLivro.resx">
+      <DependentUpon>FormEmprestimoLivro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
@@ -163,5 +198,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

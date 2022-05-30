@@ -30,16 +30,11 @@ namespace UIPrincipal
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormConsultaUsuario));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.buttonSair = new System.Windows.Forms.Button();
-            this.buttonExcluir = new System.Windows.Forms.Button();
-            this.buttoAlterar = new System.Windows.Forms.Button();
-            this.buttonNovo = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.textBoxBuscar = new System.Windows.Forms.TextBox();
             this.usuarioDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,7 +46,6 @@ namespace UIPrincipal
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnBuscar = new System.Windows.Forms.PictureBox();
             this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeUsuarioDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.enderecoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,98 +53,21 @@ namespace UIPrincipal
             this.emailDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.senhaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ativoDataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.buttonImprimir = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonNovo = new UIPrincipal.RJButton();
+            this.buttonSair = new UIPrincipal.RJButton();
+            this.buttonAlterar = new UIPrincipal.RJButton();
+            this.buttonImprimir = new UIPrincipal.RJButton();
+            this.buttonExcluir = new UIPrincipal.RJButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnBuscar = new UIPrincipal.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // buttonSair
-            // 
-            this.buttonSair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonSair.FlatAppearance.BorderColor = System.Drawing.Color.DarkCyan;
-            this.buttonSair.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkKhaki;
-            this.buttonSair.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkKhaki;
-            this.buttonSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSair.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSair.Image = ((System.Drawing.Image)(resources.GetObject("buttonSair.Image")));
-            this.buttonSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSair.Location = new System.Drawing.Point(919, 488);
-            this.buttonSair.Name = "buttonSair";
-            this.buttonSair.Size = new System.Drawing.Size(75, 40);
-            this.buttonSair.TabIndex = 5;
-            this.buttonSair.Text = "&Sair";
-            this.buttonSair.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonSair.UseVisualStyleBackColor = true;
-            this.buttonSair.Click += new System.EventHandler(this.buttonSair_Click);
-            // 
-            // buttonExcluir
-            // 
-            this.buttonExcluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonExcluir.FlatAppearance.BorderColor = System.Drawing.Color.DarkCyan;
-            this.buttonExcluir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkKhaki;
-            this.buttonExcluir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkKhaki;
-            this.buttonExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExcluir.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExcluir.Image = ((System.Drawing.Image)(resources.GetObject("buttonExcluir.Image")));
-            this.buttonExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonExcluir.Location = new System.Drawing.Point(214, 488);
-            this.buttonExcluir.Name = "buttonExcluir";
-            this.buttonExcluir.Size = new System.Drawing.Size(85, 40);
-            this.buttonExcluir.TabIndex = 4;
-            this.buttonExcluir.Text = "E&xcluir";
-            this.buttonExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonExcluir.UseVisualStyleBackColor = true;
-            this.buttonExcluir.Click += new System.EventHandler(this.buttonExcluir_Click);
-            // 
-            // buttoAlterar
-            // 
-            this.buttoAlterar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttoAlterar.FlatAppearance.BorderColor = System.Drawing.Color.DarkCyan;
-            this.buttoAlterar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkKhaki;
-            this.buttoAlterar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkKhaki;
-            this.buttoAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttoAlterar.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttoAlterar.Image = ((System.Drawing.Image)(resources.GetObject("buttoAlterar.Image")));
-            this.buttoAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttoAlterar.Location = new System.Drawing.Point(112, 488);
-            this.buttoAlterar.Name = "buttoAlterar";
-            this.buttoAlterar.Size = new System.Drawing.Size(85, 40);
-            this.buttoAlterar.TabIndex = 3;
-            this.buttoAlterar.Text = "    &Alterar";
-            this.buttoAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttoAlterar.UseVisualStyleBackColor = true;
-            this.buttoAlterar.Click += new System.EventHandler(this.buttoAlterar_Click);
-            // 
-            // buttonNovo
-            // 
-            this.buttonNovo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonNovo.FlatAppearance.BorderColor = System.Drawing.Color.DarkCyan;
-            this.buttonNovo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkKhaki;
-            this.buttonNovo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkKhaki;
-            this.buttonNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNovo.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonNovo.Image = ((System.Drawing.Image)(resources.GetObject("buttonNovo.Image")));
-            this.buttonNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonNovo.Location = new System.Drawing.Point(12, 488);
-            this.buttonNovo.Name = "buttonNovo";
-            this.buttonNovo.Size = new System.Drawing.Size(85, 40);
-            this.buttonNovo.TabIndex = 2;
-            this.buttonNovo.Text = "     &Novo";
-            this.buttonNovo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonNovo.UseVisualStyleBackColor = true;
-            this.buttonNovo.Click += new System.EventHandler(this.buttonNovo_Click);
-            // 
-            // label1
-            // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1015, 100);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Cadastro de usuários";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textBoxBuscar
             // 
@@ -171,14 +88,14 @@ namespace UIPrincipal
             this.usuarioDataGridView.AutoGenerateColumns = false;
             this.usuarioDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
             this.usuarioDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DarkCyan;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.usuarioDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkCyan;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.usuarioDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.usuarioDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.usuarioDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn3,
@@ -191,30 +108,30 @@ namespace UIPrincipal
             this.dataGridViewCheckBoxColumn2});
             this.usuarioDataGridView.Cursor = System.Windows.Forms.Cursors.Hand;
             this.usuarioDataGridView.DataSource = this.usuarioBindingSource;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DarkCyan;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.usuarioDataGridView.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkCyan;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.usuarioDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.usuarioDataGridView.Location = new System.Drawing.Point(12, 140);
             this.usuarioDataGridView.Name = "usuarioDataGridView";
             this.usuarioDataGridView.ReadOnly = true;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.DarkCyan;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.usuarioDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.DarkCyan;
-            this.usuarioDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkCyan;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.usuarioDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkCyan;
+            this.usuarioDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.usuarioDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.usuarioDataGridView.Size = new System.Drawing.Size(982, 333);
+            this.usuarioDataGridView.Size = new System.Drawing.Size(982, 418);
             this.usuarioDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn3
@@ -284,21 +201,6 @@ namespace UIPrincipal
             // 
             this.usuarioBindingSource.DataSource = typeof(Model.Usuario);
             // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscar.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.btnBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(919, 103);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(65, 27);
-            this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnBuscar.TabIndex = 8;
-            this.btnBuscar.TabStop = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
             // idDataGridViewTextBoxColumn1
             // 
             this.idDataGridViewTextBoxColumn1.DataPropertyName = "Id";
@@ -341,40 +243,208 @@ namespace UIPrincipal
             this.ativoDataGridViewCheckBoxColumn1.HeaderText = "Ativo";
             this.ativoDataGridViewCheckBoxColumn1.Name = "ativoDataGridViewCheckBoxColumn1";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DarkCyan;
+            this.panel1.Controls.Add(this.buttonNovo);
+            this.panel1.Controls.Add(this.buttonSair);
+            this.panel1.Controls.Add(this.buttonAlterar);
+            this.panel1.Controls.Add(this.buttonImprimir);
+            this.panel1.Controls.Add(this.buttonExcluir);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 564);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1015, 76);
+            this.panel1.TabIndex = 14;
+            // 
+            // buttonNovo
+            // 
+            this.buttonNovo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonNovo.BackColor = System.Drawing.Color.White;
+            this.buttonNovo.BackgroundColor = System.Drawing.Color.White;
+            this.buttonNovo.BorderColor = System.Drawing.Color.DarkCyan;
+            this.buttonNovo.BorderRadius = 40;
+            this.buttonNovo.BorderSize = 0;
+            this.buttonNovo.FlatAppearance.BorderSize = 0;
+            this.buttonNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNovo.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonNovo.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.buttonNovo.Image = ((System.Drawing.Image)(resources.GetObject("buttonNovo.Image")));
+            this.buttonNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonNovo.Location = new System.Drawing.Point(12, 11);
+            this.buttonNovo.Name = "buttonNovo";
+            this.buttonNovo.Size = new System.Drawing.Size(109, 53);
+            this.buttonNovo.TabIndex = 2;
+            this.buttonNovo.Text = "     Novo";
+            this.buttonNovo.TextColor = System.Drawing.SystemColors.WindowText;
+            this.buttonNovo.UseVisualStyleBackColor = false;
+            this.buttonNovo.Click += new System.EventHandler(this.buttonNovo_Click_1);
+            // 
+            // buttonSair
+            // 
+            this.buttonSair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSair.BackColor = System.Drawing.SystemColors.Control;
+            this.buttonSair.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.buttonSair.BorderColor = System.Drawing.Color.DarkCyan;
+            this.buttonSair.BorderRadius = 40;
+            this.buttonSair.BorderSize = 0;
+            this.buttonSair.FlatAppearance.BorderSize = 0;
+            this.buttonSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSair.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F);
+            this.buttonSair.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.buttonSair.Image = ((System.Drawing.Image)(resources.GetObject("buttonSair.Image")));
+            this.buttonSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSair.Location = new System.Drawing.Point(885, 11);
+            this.buttonSair.Name = "buttonSair";
+            this.buttonSair.Size = new System.Drawing.Size(109, 53);
+            this.buttonSair.TabIndex = 13;
+            this.buttonSair.Text = "       Sair";
+            this.buttonSair.TextColor = System.Drawing.SystemColors.WindowText;
+            this.buttonSair.UseVisualStyleBackColor = false;
+            this.buttonSair.Click += new System.EventHandler(this.buttonSair_Click_1);
+            // 
+            // buttonAlterar
+            // 
+            this.buttonAlterar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonAlterar.BackColor = System.Drawing.Color.White;
+            this.buttonAlterar.BackgroundColor = System.Drawing.Color.White;
+            this.buttonAlterar.BorderColor = System.Drawing.Color.DarkCyan;
+            this.buttonAlterar.BorderRadius = 40;
+            this.buttonAlterar.BorderSize = 0;
+            this.buttonAlterar.FlatAppearance.BorderSize = 0;
+            this.buttonAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAlterar.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F);
+            this.buttonAlterar.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.buttonAlterar.Image = ((System.Drawing.Image)(resources.GetObject("buttonAlterar.Image")));
+            this.buttonAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonAlterar.Location = new System.Drawing.Point(127, 11);
+            this.buttonAlterar.Name = "buttonAlterar";
+            this.buttonAlterar.Size = new System.Drawing.Size(109, 53);
+            this.buttonAlterar.TabIndex = 10;
+            this.buttonAlterar.Text = "    Alterar";
+            this.buttonAlterar.TextColor = System.Drawing.SystemColors.WindowText;
+            this.buttonAlterar.UseVisualStyleBackColor = false;
+            this.buttonAlterar.Click += new System.EventHandler(this.buttonAlterar_Click);
+            // 
             // buttonImprimir
             // 
             this.buttonImprimir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonImprimir.FlatAppearance.BorderColor = System.Drawing.Color.DarkCyan;
-            this.buttonImprimir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkKhaki;
-            this.buttonImprimir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkKhaki;
+            this.buttonImprimir.BackColor = System.Drawing.Color.White;
+            this.buttonImprimir.BackgroundColor = System.Drawing.Color.White;
+            this.buttonImprimir.BorderColor = System.Drawing.Color.DarkCyan;
+            this.buttonImprimir.BorderRadius = 40;
+            this.buttonImprimir.BorderSize = 0;
+            this.buttonImprimir.FlatAppearance.BorderSize = 0;
             this.buttonImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonImprimir.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F);
+            this.buttonImprimir.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F);
+            this.buttonImprimir.ForeColor = System.Drawing.SystemColors.WindowText;
             this.buttonImprimir.Image = ((System.Drawing.Image)(resources.GetObject("buttonImprimir.Image")));
             this.buttonImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonImprimir.Location = new System.Drawing.Point(319, 488);
+            this.buttonImprimir.Location = new System.Drawing.Point(357, 11);
             this.buttonImprimir.Name = "buttonImprimir";
-            this.buttonImprimir.Size = new System.Drawing.Size(161, 40);
-            this.buttonImprimir.TabIndex = 9;
-            this.buttonImprimir.Text = "Imprimir Relatório";
-            this.buttonImprimir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonImprimir.UseVisualStyleBackColor = true;
-            this.buttonImprimir.Click += new System.EventHandler(this.buttonImprimir_Click);
+            this.buttonImprimir.Size = new System.Drawing.Size(161, 53);
+            this.buttonImprimir.TabIndex = 12;
+            this.buttonImprimir.Text = "     Gerar Relatório";
+            this.buttonImprimir.TextColor = System.Drawing.SystemColors.WindowText;
+            this.buttonImprimir.UseVisualStyleBackColor = false;
+            this.buttonImprimir.Click += new System.EventHandler(this.buttonImprimir_Click_1);
+            // 
+            // buttonExcluir
+            // 
+            this.buttonExcluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonExcluir.BackColor = System.Drawing.Color.White;
+            this.buttonExcluir.BackgroundColor = System.Drawing.Color.White;
+            this.buttonExcluir.BorderColor = System.Drawing.Color.DarkCyan;
+            this.buttonExcluir.BorderRadius = 40;
+            this.buttonExcluir.BorderSize = 0;
+            this.buttonExcluir.FlatAppearance.BorderSize = 0;
+            this.buttonExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExcluir.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F);
+            this.buttonExcluir.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.buttonExcluir.Image = ((System.Drawing.Image)(resources.GetObject("buttonExcluir.Image")));
+            this.buttonExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonExcluir.Location = new System.Drawing.Point(242, 11);
+            this.buttonExcluir.Name = "buttonExcluir";
+            this.buttonExcluir.Size = new System.Drawing.Size(109, 53);
+            this.buttonExcluir.TabIndex = 11;
+            this.buttonExcluir.Text = "      Excluir";
+            this.buttonExcluir.TextColor = System.Drawing.SystemColors.WindowText;
+            this.buttonExcluir.UseVisualStyleBackColor = false;
+            this.buttonExcluir.Click += new System.EventHandler(this.buttonExcluir_Click_1);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.DarkCyan;
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1015, 66);
+            this.panel2.TabIndex = 15;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkKhaki;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkKhaki;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(975, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(40, 40);
+            this.button1.TabIndex = 8;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(322, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(317, 50);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Cadastro de usuários";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscar.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnBuscar.BackgroundColor = System.Drawing.Color.DarkCyan;
+            this.btnBuscar.BorderColor = System.Drawing.Color.DarkCyan;
+            this.btnBuscar.BorderRadius = 27;
+            this.btnBuscar.BorderSize = 0;
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Location = new System.Drawing.Point(913, 103);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(90, 27);
+            this.btnBuscar.TabIndex = 1;
+            this.btnBuscar.Text = "Pesquisar";
+            this.btnBuscar.TextColor = System.Drawing.Color.White;
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
             // 
             // FormConsultaUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1015, 540);
-            this.Controls.Add(this.buttonImprimir);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1015, 640);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.buttonSair);
             this.Controls.Add(this.usuarioDataGridView);
-            this.Controls.Add(this.buttonExcluir);
-            this.Controls.Add(this.buttoAlterar);
             this.Controls.Add(this.textBoxBuscar);
-            this.Controls.Add(this.buttonNovo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
             this.MinimizeBox = false;
@@ -388,20 +458,15 @@ namespace UIPrincipal
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormConsultaUsuario_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.usuarioDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button buttonExcluir;
-        private System.Windows.Forms.Button buttoAlterar;
-        private System.Windows.Forms.Button buttonNovo;
-        private System.Windows.Forms.Button buttonSair;
         private System.Windows.Forms.TextBox textBoxBuscar;
-        private System.Windows.Forms.PictureBox btnBuscar;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeUsuarioDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn enderecoDataGridViewTextBoxColumn1;
@@ -419,6 +484,15 @@ namespace UIPrincipal
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
         private System.Windows.Forms.DataGridView usuarioDataGridView;
         public System.Windows.Forms.BindingSource usuarioBindingSource;
-        private System.Windows.Forms.Button buttonImprimir;
+        private RJButton btnBuscar;
+        private RJButton buttonNovo;
+        private RJButton buttonAlterar;
+        private RJButton buttonExcluir;
+        private RJButton buttonImprimir;
+        private RJButton buttonSair;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }

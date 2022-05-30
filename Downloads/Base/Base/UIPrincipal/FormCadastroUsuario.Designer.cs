@@ -51,9 +51,6 @@ namespace UIPrincipal
             System.Windows.Forms.Label label16;
             System.Windows.Forms.Label label2;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadastroUsuario));
-            this.buttonSalvar = new System.Windows.Forms.Button();
-            this.buttonSalvarECadastrarNovo = new System.Windows.Forms.Button();
-            this.buttonSair = new System.Windows.Forms.Button();
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nomeUsuarioTextBox = new System.Windows.Forms.TextBox();
@@ -78,6 +75,9 @@ namespace UIPrincipal
             this.cidadeComboBox = new System.Windows.Forms.ComboBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.nivelTextBox = new System.Windows.Forms.TextBox();
+            this.buttonSalvar = new UIPrincipal.RJButton();
+            this.buttonSalvarECadastrarNovo = new UIPrincipal.RJButton();
+            this.buttonSair = new UIPrincipal.RJButton();
             idLabel = new System.Windows.Forms.Label();
             nomeUsuarioLabel = new System.Windows.Forms.Label();
             senhaLabel = new System.Windows.Forms.Label();
@@ -318,63 +318,6 @@ namespace UIPrincipal
             label2.Size = new System.Drawing.Size(48, 21);
             label2.TabIndex = 40;
             label2.Text = "Nível";
-            // 
-            // buttonSalvar
-            // 
-            this.buttonSalvar.BackColor = System.Drawing.SystemColors.Control;
-            this.buttonSalvar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonSalvar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkKhaki;
-            this.buttonSalvar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkKhaki;
-            this.buttonSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSalvar.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F);
-            this.buttonSalvar.Image = ((System.Drawing.Image)(resources.GetObject("buttonSalvar.Image")));
-            this.buttonSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSalvar.Location = new System.Drawing.Point(36, 501);
-            this.buttonSalvar.Name = "buttonSalvar";
-            this.buttonSalvar.Size = new System.Drawing.Size(85, 40);
-            this.buttonSalvar.TabIndex = 1;
-            this.buttonSalvar.Text = "Sal&var";
-            this.buttonSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonSalvar.UseVisualStyleBackColor = false;
-            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
-            // 
-            // buttonSalvarECadastrarNovo
-            // 
-            this.buttonSalvarECadastrarNovo.BackColor = System.Drawing.SystemColors.Control;
-            this.buttonSalvarECadastrarNovo.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonSalvarECadastrarNovo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkKhaki;
-            this.buttonSalvarECadastrarNovo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkKhaki;
-            this.buttonSalvarECadastrarNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSalvarECadastrarNovo.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F);
-            this.buttonSalvarECadastrarNovo.Image = ((System.Drawing.Image)(resources.GetObject("buttonSalvarECadastrarNovo.Image")));
-            this.buttonSalvarECadastrarNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSalvarECadastrarNovo.Location = new System.Drawing.Point(139, 501);
-            this.buttonSalvarECadastrarNovo.Name = "buttonSalvarECadastrarNovo";
-            this.buttonSalvarECadastrarNovo.Size = new System.Drawing.Size(219, 40);
-            this.buttonSalvarECadastrarNovo.TabIndex = 2;
-            this.buttonSalvarECadastrarNovo.Text = "Salvar e cadastrar um &novo";
-            this.buttonSalvarECadastrarNovo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonSalvarECadastrarNovo.UseVisualStyleBackColor = false;
-            this.buttonSalvarECadastrarNovo.Click += new System.EventHandler(this.buttonSalvarECadastrarNovo_Click);
-            // 
-            // buttonSair
-            // 
-            this.buttonSair.BackColor = System.Drawing.SystemColors.Control;
-            this.buttonSair.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonSair.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkKhaki;
-            this.buttonSair.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkKhaki;
-            this.buttonSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSair.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F);
-            this.buttonSair.Image = ((System.Drawing.Image)(resources.GetObject("buttonSair.Image")));
-            this.buttonSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSair.Location = new System.Drawing.Point(699, 501);
-            this.buttonSair.Name = "buttonSair";
-            this.buttonSair.Size = new System.Drawing.Size(85, 40);
-            this.buttonSair.TabIndex = 3;
-            this.buttonSair.Text = "&Sair";
-            this.buttonSair.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonSair.UseVisualStyleBackColor = false;
-            this.buttonSair.Click += new System.EventHandler(this.buttonSair_Click);
             // 
             // idTextBox
             // 
@@ -625,12 +568,85 @@ namespace UIPrincipal
             this.nivelTextBox.Size = new System.Drawing.Size(142, 26);
             this.nivelTextBox.TabIndex = 41;
             // 
+            // buttonSalvar
+            // 
+            this.buttonSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonSalvar.BackColor = System.Drawing.SystemColors.Control;
+            this.buttonSalvar.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.buttonSalvar.BorderColor = System.Drawing.Color.DarkCyan;
+            this.buttonSalvar.BorderRadius = 40;
+            this.buttonSalvar.BorderSize = 0;
+            this.buttonSalvar.FlatAppearance.BorderSize = 0;
+            this.buttonSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSalvar.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSalvar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonSalvar.Image = ((System.Drawing.Image)(resources.GetObject("buttonSalvar.Image")));
+            this.buttonSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSalvar.Location = new System.Drawing.Point(29, 495);
+            this.buttonSalvar.Name = "buttonSalvar";
+            this.buttonSalvar.Size = new System.Drawing.Size(109, 53);
+            this.buttonSalvar.TabIndex = 42;
+            this.buttonSalvar.Text = "     Salvar";
+            this.buttonSalvar.TextColor = System.Drawing.SystemColors.ControlText;
+            this.buttonSalvar.UseVisualStyleBackColor = false;
+            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click_1);
+            // 
+            // buttonSalvarECadastrarNovo
+            // 
+            this.buttonSalvarECadastrarNovo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonSalvarECadastrarNovo.BackColor = System.Drawing.SystemColors.Control;
+            this.buttonSalvarECadastrarNovo.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.buttonSalvarECadastrarNovo.BorderColor = System.Drawing.Color.DarkCyan;
+            this.buttonSalvarECadastrarNovo.BorderRadius = 40;
+            this.buttonSalvarECadastrarNovo.BorderSize = 0;
+            this.buttonSalvarECadastrarNovo.FlatAppearance.BorderSize = 0;
+            this.buttonSalvarECadastrarNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSalvarECadastrarNovo.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSalvarECadastrarNovo.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonSalvarECadastrarNovo.Image = ((System.Drawing.Image)(resources.GetObject("buttonSalvarECadastrarNovo.Image")));
+            this.buttonSalvarECadastrarNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSalvarECadastrarNovo.Location = new System.Drawing.Point(144, 495);
+            this.buttonSalvarECadastrarNovo.Name = "buttonSalvarECadastrarNovo";
+            this.buttonSalvarECadastrarNovo.Size = new System.Drawing.Size(252, 53);
+            this.buttonSalvarECadastrarNovo.TabIndex = 43;
+            this.buttonSalvarECadastrarNovo.Text = "       Salvar e cadastrar um &novo";
+            this.buttonSalvarECadastrarNovo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonSalvarECadastrarNovo.TextColor = System.Drawing.SystemColors.ControlText;
+            this.buttonSalvarECadastrarNovo.UseVisualStyleBackColor = false;
+            this.buttonSalvarECadastrarNovo.Click += new System.EventHandler(this.buttonSalvarECadastrarNovo_Click_1);
+            // 
+            // buttonSair
+            // 
+            this.buttonSair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonSair.BackColor = System.Drawing.SystemColors.Control;
+            this.buttonSair.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.buttonSair.BorderColor = System.Drawing.Color.DarkCyan;
+            this.buttonSair.BorderRadius = 40;
+            this.buttonSair.BorderSize = 0;
+            this.buttonSair.FlatAppearance.BorderSize = 0;
+            this.buttonSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSair.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSair.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonSair.Image = ((System.Drawing.Image)(resources.GetObject("buttonSair.Image")));
+            this.buttonSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSair.Location = new System.Drawing.Point(697, 495);
+            this.buttonSair.Name = "buttonSair";
+            this.buttonSair.Size = new System.Drawing.Size(109, 53);
+            this.buttonSair.TabIndex = 44;
+            this.buttonSair.Text = "     Sair";
+            this.buttonSair.TextColor = System.Drawing.SystemColors.ControlText;
+            this.buttonSair.UseVisualStyleBackColor = false;
+            this.buttonSair.Click += new System.EventHandler(this.buttonSair_Click_1);
+            // 
             // FormCadastroUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkCyan;
             this.ClientSize = new System.Drawing.Size(818, 566);
+            this.Controls.Add(this.buttonSair);
+            this.Controls.Add(this.buttonSalvarECadastrarNovo);
+            this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.nivelTextBox);
             this.Controls.Add(label2);
             this.Controls.Add(this.senhaTextBox);
@@ -673,9 +689,6 @@ namespace UIPrincipal
             this.Controls.Add(nomeUsuarioLabel);
             this.Controls.Add(idLabel);
             this.Controls.Add(ativoLabel);
-            this.Controls.Add(this.buttonSair);
-            this.Controls.Add(this.buttonSalvarECadastrarNovo);
-            this.Controls.Add(this.buttonSalvar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.KeyPreview = true;
             this.MaximizeBox = false;
@@ -683,7 +696,7 @@ namespace UIPrincipal
             this.Name = "FormCadastroUsuario";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "b";
+            this.Text = "Cadastro";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormCadastroUsuario_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fotoTextBox)).EndInit();
@@ -693,10 +706,6 @@ namespace UIPrincipal
         }
 
         #endregion
-
-        private System.Windows.Forms.Button buttonSalvar;
-        private System.Windows.Forms.Button buttonSalvarECadastrarNovo;
-        private System.Windows.Forms.Button buttonSair;
         private System.Windows.Forms.TextBox idTextBox;
         private System.Windows.Forms.TextBox nomeUsuarioTextBox;
         private System.Windows.Forms.TextBox senhaTextBox;
@@ -721,6 +730,9 @@ namespace UIPrincipal
         private System.Windows.Forms.BindingSource usuarioBindingSource;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.TextBox nivelTextBox;
+        private RJButton buttonSalvar;
+        private RJButton buttonSalvarECadastrarNovo;
+        private RJButton buttonSair;
     }
 }
 

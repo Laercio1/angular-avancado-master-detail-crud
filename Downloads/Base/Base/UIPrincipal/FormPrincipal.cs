@@ -12,32 +12,6 @@ namespace UIPrincipal
             InitializeComponent();
             FormLogin formLogin = new FormLogin(this);
             formLogin.ShowDialog();
-            customizeDesing();
-        }
-        private void customizeDesing()
-        {
-            panelSubMenu.Visible = false;
-            panelSubMenuAjuda.Visible = false;
-            panelSubMenuManutencao.Visible = false;
-        }
-        private void hideSubMenu()
-        {
-            if (panelSubMenu.Visible == true)
-                panelSubMenu.Visible = false;
-            if (panelSubMenuAjuda.Visible == true)
-                panelSubMenuAjuda.Visible = false;
-            if (panelSubMenuManutencao.Visible == true)
-                panelSubMenuManutencao.Visible = false;
-        }
-        private void showSubMenu(Panel subMenu)
-        {
-            if (subMenu.Visible == false)
-            {
-                hideSubMenu();
-                subMenu.Visible = true;
-            }
-            else
-                subMenu.Visible = false;
         }
         private void AbrirFormEnPanel(object Formhijo)
         {
@@ -50,37 +24,12 @@ namespace UIPrincipal
             this.panelConteiner.Tag = fh;
             fh.Show();
         }
-        private void buttonCadastro_Click_1(object sender, EventArgs e)
-        {
-            showSubMenu(panelSubMenu);
-        }
-
-        private void buttonUsuario_Click_1(object sender, EventArgs e)
-        {
-
-            if (Globais.logado)
-            {
-                if (Globais.nivel >= 1)
-                {
-                    AbrirFormEnPanel(new FormConsultaUsuario());
-                    hideSubMenu();
-                }
-                else
-                {
-                    MessageBox.Show("Acesso não permitido");
-                }
-            }
-            else
-            {
-                MessageBox.Show("É necessário ter um usuário logado");
-            }
-        }
 
         private void buttonMenu_Click(object sender, EventArgs e)
         {
             if (menuVertical.Width == 269)
             {
-                menuVertical.Width = 0;
+                menuVertical.Width = 79;
             }
             else
                 menuVertical.Width = 269;
@@ -121,45 +70,32 @@ namespace UIPrincipal
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void buttonAjuda_Click(object sender, EventArgs e)
+        private void buttonCadastro_Click(object sender, EventArgs e)
         {
-            showSubMenu(panelSubMenuAjuda);
+            menuDropdown1.Show(buttonCadastro, buttonCadastro.Width, 0);
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void FormPrincipal_Load(object sender, EventArgs e)
         {
-            using (FormLogin frm = new FormLogin(this))
-            {
-                frm.ShowDialog();
-            }
-            hideSubMenu();
+            menuDropdown1.IsMainMenu = true;
+            menuDropdown2.IsMainMenu = true;
+            menuDropdown3.IsMainMenu = true;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonAjuda_Click_1(object sender, EventArgs e)
         {
-            lb_nomeUsuario.Text = "---";
-            Globais.logado = false;
-            Globais.nivel = 0;
-            using (FormLogin frm = new FormLogin(this))
-            {
-                frm.ShowDialog();
-            }
-            hideSubMenu();
+            menuDropdown2.Show(buttonAjuda, buttonAjuda.Width, 0);
         }
 
-        private void buttonManutencao_Click(object sender, EventArgs e)
-        {
-            showSubMenu(panelSubMenuManutencao);
-        }
-
-        private void buttonBancoDeDados_Click(object sender, EventArgs e)
+        private void usuárioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (Globais.logado)
             {
-                if (Globais.nivel >= 2)
+                if (Globais.nivel >= 1)
                 {
-                    //Procedimentos 
-
+                    AbrirFormEnPanel(new FormConsultaUsuario());
+                    barraTitulo.Visible = false;
+                    panel.Visible = false;
                 }
                 else
                 {
@@ -172,14 +108,62 @@ namespace UIPrincipal
             }
         }
 
-        private void buttonGrupoUsuario_Click(object sender, EventArgs e)
+        private void trocarUsuárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (FormLogin frm = new FormLogin(this))
+            {
+                frm.ShowDialog();
+            }
+        }
+
+        private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lb_nomeUsuario.Text = "---";
+            Globais.logado = false;
+            Globais.nivel = 0;
+            using (FormLogin frm = new FormLogin(this))
+            {
+                frm.ShowDialog();
+            }
+        }
+
+        private void buttonServico_Click(object sender, EventArgs e)
+        {
+            menuDropdown3.Show(buttonServico, buttonServico.Width, 0);
+        }
+
+        private void empréstimoDeLivroToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (Globais.logado)
             {
                 if (Globais.nivel >= 1)
                 {
                     //Procedimentos 
+                    AbrirFormEnPanel(new FormEmprestimoLivro());
+                    barraTitulo.Visible = false;
+                    panel.Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show("Acesso não permitido");
+                }
+            }
+            else
+            {
+                MessageBox.Show("É necessário ter um usuário logado");
+            }
+        }
 
+        private void leitorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Globais.logado)
+            {
+                if (Globais.nivel >= 1)
+                {
+                    //Procedimentos 
+                    AbrirFormEnPanel(new FormCadastroLivros());
+                    barraTitulo.Visible = false;
+                    panel.Visible = false;
                 }
                 else
                 {

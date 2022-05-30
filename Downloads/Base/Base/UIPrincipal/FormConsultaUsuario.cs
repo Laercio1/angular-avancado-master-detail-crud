@@ -6,6 +6,7 @@ using Model;
 using System;
 using System.Data;
 using System.IO;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace UIPrincipal
@@ -22,44 +23,51 @@ namespace UIPrincipal
 
         }
 
-        private void buttoAlterar_Click(object sender, EventArgs e)
-        {
-            using (FormCadastroUsuario frm = new FormCadastroUsuario(usuarioBindingSource.Current))
-            {
-                frm.ShowDialog();
-            }
-            buttonBuscar_Click(null, null);
-        }
-
-        private void buttonNovo_Click(object sender, EventArgs e)
-        {
-            using (FormCadastroUsuario frm = new FormCadastroUsuario())
-            {
-                frm.ShowDialog();
-            }
-            buttonBuscar_Click(null, null);
-        }
-
-        private void buttonSair_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void FormConsultaUsuario_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
             {
-                buttonSair_Click(null, null);
+                buttonSair_Click_1(null, null);
             }
         }
 
-        private void buttonBuscar_Click(object sender, EventArgs e)
+        private void FormConsultaUsuario_Load(object sender, EventArgs e)
         {
             UsuarioBLL usuarioBLL = new UsuarioBLL();
             usuarioBindingSource.DataSource = usuarioBLL.Buscar(textBoxBuscar.Text);
         }
 
-        private void buttonExcluir_Click(object sender, EventArgs e)
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            UsuarioBLL usuarioBLL = new UsuarioBLL();
+            usuarioBindingSource.DataSource = usuarioBLL.Buscar(textBoxBuscar.Text);
+        }
+
+        private void btnBuscar_Click_1(object sender, EventArgs e)
+        {
+            UsuarioBLL usuarioBLL = new UsuarioBLL();
+            usuarioBindingSource.DataSource = usuarioBLL.Buscar(textBoxBuscar.Text);
+        }
+
+        private void buttonNovo_Click_1(object sender, EventArgs e)
+        {
+            using (FormCadastroUsuario frm = new FormCadastroUsuario())
+            {
+                frm.ShowDialog();
+            }
+            btnBuscar_Click(null, null);
+        }
+
+        private void buttonAlterar_Click(object sender, EventArgs e)
+        {
+            using (FormCadastroUsuario frm = new FormCadastroUsuario(usuarioBindingSource.Current))
+            {
+                frm.ShowDialog();
+            }
+            btnBuscar_Click(null, null);
+        }
+
+        private void buttonExcluir_Click_1(object sender, EventArgs e)
         {
             if (MessageBox.Show("Deseja realmente excluir este registro?", "Atenção", MessageBoxButtons.YesNo) == DialogResult.No)
                 return;
@@ -72,24 +80,7 @@ namespace UIPrincipal
             MessageBox.Show("Registro excluido com sucesso!");
         }
 
-        private void FormConsultaUsuario_Load(object sender, EventArgs e)
-        {
-            UsuarioBLL usuarioBLL = new UsuarioBLL();
-            usuarioBindingSource.DataSource = usuarioBLL.Buscar(textBoxBuscar.Text);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            UsuarioBLL usuarioBLL = new UsuarioBLL();
-            usuarioBindingSource.DataSource = usuarioBLL.Buscar(textBoxBuscar.Text);
-        }
-
-        private void buttonImprimir_Click(object sender, EventArgs e)
+        private void buttonImprimir_Click_1(object sender, EventArgs e)
         {
             var vqueryDVG = @"
                    SELECT 
@@ -151,6 +142,26 @@ namespace UIPrincipal
             {
                 System.Diagnostics.Process.Start(Globais.caminho + @"\usuarios.pdf");
             }
+        }
+
+        private void buttonSair_Click_1(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void buttonSair_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
